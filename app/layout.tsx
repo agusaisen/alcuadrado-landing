@@ -9,23 +9,23 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'alcuadrado.it | Desarrollo Web',
   description: 'Agencia de desarrollo web y diseño digital',
-  generator: 'v0.app',
+  generator: 'alcuadrado.it',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/icon.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/icon.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon.png',
+        type: 'image/png+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/icon.png',
   },
 }
 
