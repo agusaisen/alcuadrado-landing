@@ -6,7 +6,7 @@ export function Footer() {
       {/* Background image */}
       <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/footer-bg-SXQcPktwNsum2XwD3erMhQA2Jj2159.webp"
+          src="/footer-bg.webp"
           alt="Decorative compass illustration"
           fill
           className="object-cover object-center"
