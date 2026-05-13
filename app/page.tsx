@@ -9,7 +9,10 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#141414]">
+    <main 
+      className="min-h-screen bg-[#141414] bg-cover bg-center bg-fixed bg-no-repeat"
+      style={{ backgroundImage: "url('/Ambient Background.webp')" }}
+    >
       <Header />
       <Hero />
       <ProcessSection />
