@@ -21,7 +21,7 @@ export function ProcessSection() {
               <span className="text-[#71717a] font-light">Muchas empresas crecieron,</span>
               <br />
               <span className="text-[#71717a] font-light">pero </span>
-              <span className="text-[#38bdf8] font-semibold italic">sus procesos no.</span>
+              <span className="text-[#38bdf8] font-semibold">sus procesos no.</span>
             </h2>
             
             <p className="text-[#52525b] text-base md:text-lg leading-relaxed">
