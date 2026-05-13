@@ -18,10 +18,10 @@ export function ProcessSection() {
           {/* Right side - Content */}
           <div className="lg:w-1/2 bg-[#d4d4d8] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
-              <span className="text-[#71717a] italic font-light">Muchas empresas crecieron,</span>
+              <span className="text-[#71717a] font-light">Muchas empresas crecieron,</span>
               <br />
-              <span className="text-[#71717a] italic font-light">pero </span>
-              <span className="text-[#38bdf8] font-semibold">sus procesos no.</span>
+              <span className="text-[#71717a] font-light">pero </span>
+              <span className="text-[#38bdf8] font-semibold italic">sus procesos no.</span>
             </h2>
             
             <p className="text-[#52525b] text-base md:text-lg leading-relaxed">
