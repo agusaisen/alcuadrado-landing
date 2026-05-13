@@ -7,10 +7,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <Image 
-            src="/logotipoA2.svg" 
-            alt="alcuadrado.it" 
-            width={150} 
+          <Image
+            src="/logotip.webp"
+            alt="alcuadrado.it"
+            width={150}
             height={48}
             priority
           />
@@ -18,14 +18,14 @@ export function Header() {
 
         {/* Navigation */}
         <nav className="flex items-center gap-8">
-          <Link 
-            href="#proceso" 
+          <Link
+            href="#proceso"
             className="text-white text-sm font-medium hover:text-[#38bdf8] transition-colors hidden md:block"
           >
             Proceso
           </Link>
-          <Link 
-            href="#proyectos" 
+          <Link
+            href="#proyectos"
             className="text-white text-sm font-medium hover:text-[#38bdf8] transition-colors hidden md:block"
           >
             Proyectos
