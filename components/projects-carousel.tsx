@@ -76,6 +76,24 @@ export function ProjectsCarousel() {
   return (
     <section className="w-full bg-[#141414] py-16 md:py-24 overflow-hidden">
       <div className="relative">
+        {/* Top ellipse overlay for cylinder effect */}
+        <div 
+          className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
+          style={{
+            background: "#141414",
+            borderRadius: "0 0 50% 50%",
+          }}
+        />
+        
+        {/* Bottom ellipse overlay for cylinder effect */}
+        <div 
+          className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
+          style={{
+            background: "#141414",
+            borderRadius: "50% 50% 0 0",
+          }}
+        />
+        
         {/* Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
