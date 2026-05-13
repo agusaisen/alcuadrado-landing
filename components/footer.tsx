@@ -17,36 +17,22 @@ export function Footer() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
       </div>
 
-      {/* Bottom icons */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3">
-        {/* Diamond icon */}
-        <svg 
-          width="16" 
-          height="16" 
-          viewBox="0 0 16 16" 
-          fill="none" 
-          className="text-white/60"
-        >
-          <rect 
-            x="8" 
-            y="1" 
-            width="10" 
-            height="10" 
-            transform="rotate(45 8 1)" 
-            stroke="currentColor" 
-            strokeWidth="1.5"
+      {/* Footer content: logo left, copyright right */}
+      <div className="absolute bottom-0 left-0 right-0 py-6 px-6 md:px-12 lg:px-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Logo */}
+          <Image 
+            src="/logotipoA2.svg" 
+            alt="alcuadrado.it" 
+            width={120} 
+            height={38}
           />
-        </svg>
-        
-        {/* Dot */}
-        <div className="w-2 h-2 rounded-full bg-white/60" />
-      </div>
-
-      {/* Copyright or additional footer content can go here */}
-      <div className="absolute bottom-0 left-0 right-0 py-4 text-center">
-        <p className="text-white/40 text-xs">
-          © {new Date().getFullYear()} alcuadrado.it - Todos los derechos reservados
-        </p>
+          
+          {/* Copyright */}
+          <p className="text-white/60 text-sm">
+            © 2026 alcuadrado.it — Creado con precisión.
+          </p>
+        </div>
       </div>
     </footer>
   )
