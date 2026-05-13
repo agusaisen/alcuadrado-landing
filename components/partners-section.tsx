@@ -3,46 +3,53 @@ import Image from "next/image"
 const partners = [
   {
     name: "Frater",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-frater-Wy0cRidoNcThRc4hf6SmTxtgA4crZM.webp",
+    logo: "logo-frater.webp",
     width: 80,
     height: 24,
   },
   {
     name: "BlockTravel",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-black-travel-5ptuWRe69sAHRUImjyFGmb2xnwY3AX.webp",
+    logo: "logo-black-travel.webp",
     width: 120,
     height: 24,
   },
   {
     name: "Rio Dulce",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-riodulce-NXZN56as979vF5sfXkPS0jRojhfZ9K.webp",
+    logo: "logo-riodulce.webp",
     width: 100,
     height: 24,
   },
   {
     name: "Consultora Profesional",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-letras-ITLw6V4Lif2ltpLLDLZpkxvAlOM3Lx.webp",
+    logo: "logo-letras.webp",
     width: 100,
     height: 32,
   },
   {
     name: "Nexton",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-nxt-C1PlbWKxnTWECpKKsAUCqcj0xCqudg.webp",
+    logo: "logo-nxt.webp",
     width: 90,
     height: 24,
   },
   {
-    name: "CAS DH",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-6-imwGkpWUAHYym6NadvmlYIV8iz9Ywi.webp",
+    name: "Casi DH",
+    logo: "logo-6.webp",
     width: 70,
     height: 24,
   },
   {
     name: "Bardo",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-7-AG4MlPDusQHi9H0jTMbAqH6kdfkhMB.webp",
+    logo: "logo-7.webp",
     width: 90,
     height: 24,
   },
+  {
+    name: "CPDH",
+    logo: "logo-cpdh.webp",
+    width: 90,
+    height: 24,
+  },
+
 ]
 
 export function PartnersSection() {
@@ -51,7 +58,7 @@ export function PartnersSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
           {partners.map((partner) => (
-            <div 
+            <div
               key={partner.name}
               className="flex items-center justify-center grayscale opacity-70 hover:opacity-100 transition-opacity"
             >

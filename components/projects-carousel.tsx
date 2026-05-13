@@ -8,42 +8,42 @@ import Image from "next/image"
 const projects = [
   {
     name: "Frater",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-frater-e1lqF9G7G1Afp3o49GknNDXwSEgHLv.webp",
+    image: "proj-frater.webp",
   },
   {
     name: "Rio Dulce",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-rio-OpfRRYLZT0bwoY9wCnrL5kC0nOu1qU.webp",
+    image: "proj-rio.webp",
   },
   {
-    name: "CAS DH",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cas-9owBYF6FX2dI2EKxESp3pTmxiMEH6x.webp",
+    name: "Casi DH",
+    image: "proj-cas.webp",
   },
   {
-    name: "CP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cp-M5ikwgXFWiwH6aFkyaSIIL9UDA5FHy.webp",
+    name: "Consultora Profesional",
+    image: "proj-cp.webp",
   },
   {
     name: "CPDH",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cpdh-MlBsw3x001mnGg92pdIoiq71Ay3Njw.webp",
+    image: "proj-cpdh.webp",
   },
   {
     name: "Nexton",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nex-IQzHeRCze3Vqs8sIpFsvd3YJGokqGy.webp",
+    image: "proj-nex.webp",
   },
   {
     name: "Block Travel",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-bt-7Ksr9J4vBhxxRI5kh3Wkd825rv0n0Y.webp",
+    image: "proj-bt.webp",
   },
   {
     name: "Nexton Dev",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nexdev-0q3MzYniXcX9OVb7e2iUDxb1plCHhV.webp",
+    image: "proj-nexdev.webp",
   },
 ]
 
 export function ProjectsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { 
-      loop: true, 
+    {
+      loop: true,
       align: "center",
       skipSnaps: false,
     },
@@ -77,23 +77,23 @@ export function ProjectsCarousel() {
     <section className="w-full bg-[#141414] py-16 md:py-24 overflow-hidden">
       <div className="relative">
         {/* Top ellipse overlay for cylinder effect */}
-        <div 
+        <div
           className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
             background: "#141414",
             borderRadius: "0 0 50% 50%",
           }}
         />
-        
+
         {/* Bottom ellipse overlay for cylinder effect */}
-        <div 
+        <div
           className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
             background: "#141414",
             borderRadius: "50% 50% 0 0",
           }}
         />
-        
+
         {/* Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
@@ -108,21 +108,20 @@ export function ProjectsCarousel() {
                   key={project.name}
                   className="flex-[0_0_60%] min-w-0 px-2 md:px-4 transition-all duration-500"
                   style={{
-                    transform: isSelected 
-                      ? "scale(1) perspective(1000px) rotateY(0deg)" 
-                      : isPrev 
+                    transform: isSelected
+                      ? "scale(1) perspective(1000px) rotateY(0deg)"
+                      : isPrev
                         ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
-                        : isNext 
+                        : isNext
                           ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
                           : "scale(0.7)",
                     opacity: isVisible ? 1 : 0.3,
                     zIndex: isSelected ? 10 : 1,
                   }}
                 >
-                  <div 
-                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${
-                      isSelected ? "shadow-2xl shadow-cyan-500/20" : "brightness-50"
-                    }`}
+                  <div
+                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${isSelected ? "shadow-2xl shadow-cyan-500/20" : "brightness-50"
+                      }`}
                   >
                     <Image
                       src={project.image}
@@ -169,9 +168,8 @@ export function ProjectsCarousel() {
           <button
             key={index}
             onClick={() => emblaApi?.scrollTo(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex ? "bg-[#38bdf8] w-6" : "bg-white/30"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${index === selectedIndex ? "bg-[#38bdf8] w-6" : "bg-white/30"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
