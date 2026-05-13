@@ -8,42 +8,42 @@ import Image from "next/image"
 const projects = [
   {
     name: "Frater",
-    image: "proj-frater.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-frater-e1lqF9G7G1Afp3o49GknNDXwSEgHLv.webp",
   },
   {
     name: "Rio Dulce",
-    image: "proj-rio.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-rio-OpfRRYLZT0bwoY9wCnrL5kC0nOu1qU.webp",
   },
   {
-    name: "CASI DH",
-    image: "proj-cas.webp",
+    name: "CAS DH",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cas-9owBYF6FX2dI2EKxESp3pTmxiMEH6x.webp",
   },
   {
-    name: "Consultora Profesional",
-    image: "proj-cp.webp",
+    name: "CP",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cp-M5ikwgXFWiwH6aFkyaSIIL9UDA5FHy.webp",
   },
   {
     name: "CPDH",
-    image: "proj-cpdh.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cpdh-MlBsw3x001mnGg92pdIoiq71Ay3Njw.webp",
   },
   {
     name: "Nexton",
-    image: "proj-nex.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nex-IQzHeRCze3Vqs8sIpFsvd3YJGokqGy.webp",
   },
   {
     name: "Block Travel",
-    image: "proj-bt.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-bt-7Ksr9J4vBhxxRI5kh3Wkd825rv0n0Y.webp",
   },
   {
     name: "Nexton Dev",
-    image: "proj-nexdev.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nexdev-0q3MzYniXcX9OVb7e2iUDxb1plCHhV.webp",
   },
 ]
 
 export function ProjectsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
+    { 
+      loop: true, 
       align: "center",
       skipSnaps: false,
     },
@@ -75,60 +75,43 @@ export function ProjectsCarousel() {
 
   return (
     <section className="w-full bg-[#141414] py-16 md:py-24 overflow-hidden">
-      <div className="relative" style={{ perspective: "1200px" }}>
+      <div className="relative">
         {/* Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex items-center" style={{ transformStyle: "preserve-3d" }}>
+          <div className="flex">
             {projects.map((project, index) => {
               const isSelected = index === selectedIndex
               const isPrev = index === (selectedIndex - 1 + projects.length) % projects.length
               const isNext = index === (selectedIndex + 1) % projects.length
               const isVisible = isSelected || isPrev || isNext
 
-              // Cylindrical effect: center is narrower, sides are wider
-              const getTransform = () => {
-                if (isSelected) {
-                  // Center card: narrower, pushed back slightly
-                  return "rotateY(0deg) translateZ(-50px) scaleX(0.85)"
-                } else if (isPrev) {
-                  // Left card: rotated outward, wider appearance
-                  return "rotateY(35deg) translateZ(0px) translateX(-5%)"
-                } else if (isNext) {
-                  // Right card: rotated outward, wider appearance  
-                  return "rotateY(-35deg) translateZ(0px) translateX(5%)"
-                }
-                return "scale(0.6) translateZ(-200px)"
-              }
-
               return (
                 <div
                   key={project.name}
-                  className="flex-[0_0_50%] min-w-0 px-2 md:px-4 transition-all duration-700 ease-out"
+                  className="flex-[0_0_60%] min-w-0 px-2 md:px-4 transition-all duration-500"
                   style={{
-                    transform: getTransform(),
-                    opacity: isVisible ? 1 : 0,
-                    zIndex: isSelected ? 5 : isPrev || isNext ? 10 : 1,
-                    transformStyle: "preserve-3d",
+                    transform: isSelected 
+                      ? "scale(1) perspective(1000px) rotateY(0deg)" 
+                      : isPrev 
+                        ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
+                        : isNext 
+                          ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
+                          : "scale(0.7)",
+                    opacity: isVisible ? 1 : 0.3,
+                    zIndex: isSelected ? 10 : 1,
                   }}
                 >
-                  <div
-                    className={`relative aspect-[16/10] overflow-hidden transition-all duration-700 ${
-                      isSelected 
-                        ? "rounded-[40px] brightness-100" 
-                        : "rounded-2xl brightness-75"
+                  <div 
+                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${
+                      isSelected ? "shadow-2xl shadow-cyan-500/20" : "brightness-50"
                     }`}
-                    style={{
-                      boxShadow: isSelected 
-                        ? "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
-                        : "0 10px 30px -10px rgba(0, 0, 0, 0.3)",
-                    }}
                   >
                     <Image
                       src={project.image}
                       alt={project.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 80vw, 50vw"
+                      sizes="(max-width: 768px) 80vw, 60vw"
                     />
                   </div>
                 </div>
@@ -158,8 +141,8 @@ export function ProjectsCarousel() {
         </button>
 
         {/* Gradient overlays for depth effect */}
-        <div className="absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
-        <div className="absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
       </div>
 
       {/* Dots indicator */}
