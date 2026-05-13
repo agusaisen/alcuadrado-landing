@@ -4,6 +4,8 @@ import { ProcessSection } from "@/components/process-section"
 import { StepsSection } from "@/components/steps-section"
 import { ProjectsCarousel } from "@/components/projects-carousel"
 import { PartnersSection } from "@/components/partners-section"
+import { ContactSection } from "@/components/contact-section"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <StepsSection />
       <ProjectsCarousel />
       <PartnersSection />
+      <ContactSection />
+      <Footer />
     </main>
   )
 }
