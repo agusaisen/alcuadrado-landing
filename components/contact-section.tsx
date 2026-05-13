@@ -18,7 +18,7 @@ export function ContactSection() {
         <p className="text-2xl md:text-4xl lg:text-5xl font-medium text-[#38bdf8] mb-8">
           procesos manuales
         </p>
-        
+
         <Link
           href="#"
           className="inline-flex items-center justify-center px-8 py-3 bg-[#f1f1f4] text-[#141414] font-medium rounded-full hover:bg-white transition-colors"
