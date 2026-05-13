@@ -47,7 +47,7 @@ const partners = [
     name: "CPDH",
     logo: "logo-cpdh.webp",
     width: 90,
-    height: 24,
+    height: 45,
   },
 
 ]
