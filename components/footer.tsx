@@ -6,7 +6,7 @@ export function Footer() {
       {/* Background image */}
       <div className="relative w-full h-full md:h-[500px] lg:h-[600px]">
         <Image
-          src="/footer-bg.webp"
+          src="FOOTER-IMG.svg"
           alt="Decorative compass illustration"
           fill
           className="object-cover object-center"
