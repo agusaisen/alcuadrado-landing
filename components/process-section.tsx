@@ -16,7 +16,7 @@ export function ProcessSection() {
           </div>
           
           {/* Right side - Content */}
-          <div className="lg:w-1/2 bg-[#d4d4d8] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <div className="lg:w-1/2 bg-transparent p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
               <span className="text-[#71717a] font-light">Muchas empresas crecieron,</span>
               <br />
