@@ -6,7 +6,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HERO-IMG-58vI6Uq9zWv6M1GGxSYQZCd6CAWIsE.png"
+          src="HERO-IMG.svg"
           alt="Abstract blue sphere with orbital rings"
           fill
           className="object-cover object-center"
