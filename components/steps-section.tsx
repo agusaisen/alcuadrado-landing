@@ -82,10 +82,11 @@ function StepCard({
 }) {
   return (
     <div
+      style={highlight ? {
+        backgroundImage: "linear-gradient(46deg, rgba(28, 28, 36, 0.4) 0%, #38BDF8 100%)"
+      } : undefined}
       className={`relative rounded-2xl p-8 md:p-10 min-h-[220px] ${
-        highlight
-          ? "bg-gradient-to-br from-[#38bdf8] to-[#7dd3fc]"
-          : "bg-[rgba(28,28,36,0.4)]"
+        !highlight ? "bg-[rgba(28,28,36,0.4)]" : ""
       }`}
     >
       {/* Large Number */}
