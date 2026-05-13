@@ -20,7 +20,7 @@ export function ContactSection() {
         </p>
 
         <Link
-          href="#"
+          href="http://wa.me/+542994768136" target="blank"
           className="inline-flex items-center justify-center px-8 py-3 bg-[#f1f1f4] text-[#141414] font-medium rounded-full hover:bg-white transition-colors"
         >
           Coordinar llamada

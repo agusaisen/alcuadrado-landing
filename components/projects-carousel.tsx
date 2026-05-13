@@ -80,7 +80,7 @@ export function ProjectsCarousel() {
         <div
           className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
-            background: "#141414",
+            background: "#050508",
             borderRadius: "0 0 50% 50%",
           }}
         />
@@ -89,7 +89,7 @@ export function ProjectsCarousel() {
         <div
           className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
-            background: "#141414",
+            background: "#050508",
             borderRadius: "50% 50% 0 0",
           }}
         />

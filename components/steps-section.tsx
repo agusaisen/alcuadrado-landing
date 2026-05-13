@@ -73,7 +73,6 @@ function StepCard({
   number,
   title,
   description,
-  highlight,
 }: {
   number: string
   title: string
@@ -82,36 +81,28 @@ function StepCard({
 }) {
   return (
     <div
-      style={highlight ? {
-        backgroundImage: "linear-gradient(46deg, rgba(28, 28, 36, 0.4) 0%, #38BDF8 100%)"
-      } : undefined}
-      className={`relative rounded-2xl p-8 md:p-10 min-h-[220px] ${
-        !highlight ? "bg-[rgba(28,28,36,0.4)]" : ""
-      }`}
+      className="group relative rounded-2xl p-8 md:p-10 min-h-[220px] bg-[rgba(28,28,36,0.4)] transition-all duration-500 ease-out cursor-pointer hover:scale-[1.02]"
+      style={{
+        backgroundImage: "linear-gradient(46deg, rgba(28, 28, 36, 0.4) 0%, rgba(28, 28, 36, 0.4) 100%)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundImage = "linear-gradient(46deg, rgba(28, 28, 36, 0.4) 0%, #38BDF8 100%)"
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundImage = "linear-gradient(46deg, rgba(28, 28, 36, 0.4) 0%, rgba(28, 28, 36, 0.4) 100%)"
+      }}
     >
       {/* Large Number */}
-      <span
-        className={`absolute top-6 right-8 text-6xl md:text-7xl lg:text-8xl font-light ${
-          highlight ? "text-white/30" : "text-white/20"
-        }`}
-      >
+      <span className="absolute top-6 right-8 text-6xl md:text-7xl lg:text-8xl font-light text-white/20 transition-all duration-500 group-hover:text-white/30">
         {number}
       </span>
 
       {/* Content */}
       <div className="relative z-10">
-        <h3
-          className={`text-2xl md:text-3xl font-semibold mb-4 whitespace-pre-line ${
-            highlight ? "text-white" : "text-white"
-          }`}
-        >
+        <h3 className="text-2xl md:text-3xl font-semibold mb-4 whitespace-pre-line text-white">
           {title}
         </h3>
-        <p
-          className={`text-sm md:text-base leading-relaxed max-w-sm ${
-            highlight ? "text-white/80" : "text-white/70"
-          }`}
-        >
+        <p className="text-sm md:text-base leading-relaxed max-w-sm text-white/70 transition-all duration-500 group-hover:text-white/80">
           {description}
         </p>
       </div>
