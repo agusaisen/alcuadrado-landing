@@ -1,18 +1,19 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   return (
     <header className="w-full bg-[#141414] py-5 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-7 h-7">
-            {/* Main square */}
-            <div className="absolute inset-0 border-2 border-[#38bdf8] rounded-sm" />
-            {/* Inner square offset */}
-            <div className="absolute top-1 left-1 w-4 h-4 bg-[#38bdf8] rounded-sm" />
-          </div>
-          <span className="text-white text-lg font-medium">alcuadrado.it</span>
+        <Link href="/">
+          <Image 
+            src="/logotipoA2.svg" 
+            alt="alcuadrado.it" 
+            width={150} 
+            height={48}
+            priority
+          />
         </Link>
 
         {/* Navigation */}
