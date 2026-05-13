@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { ProcessSection } from "@/components/process-section"
 import { StepsSection } from "@/components/steps-section"
+import { ProjectsCarousel } from "@/components/projects-carousel"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <ProcessSection />
       <StepsSection />
+      <ProjectsCarousel />
     </main>
   )
 }

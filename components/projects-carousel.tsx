@@ -1,0 +1,163 @@
+"use client"
+
+import { useCallback, useEffect, useState } from "react"
+import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from "embla-carousel-autoplay"
+import Image from "next/image"
+
+const projects = [
+  {
+    name: "Frater",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-frater-e1lqF9G7G1Afp3o49GknNDXwSEgHLv.webp",
+  },
+  {
+    name: "Rio Dulce",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-rio-OpfRRYLZT0bwoY9wCnrL5kC0nOu1qU.webp",
+  },
+  {
+    name: "CAS DH",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cas-9owBYF6FX2dI2EKxESp3pTmxiMEH6x.webp",
+  },
+  {
+    name: "CP",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cp-M5ikwgXFWiwH6aFkyaSIIL9UDA5FHy.webp",
+  },
+  {
+    name: "CPDH",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-cpdh-MlBsw3x001mnGg92pdIoiq71Ay3Njw.webp",
+  },
+  {
+    name: "Nexton",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nex-IQzHeRCze3Vqs8sIpFsvd3YJGokqGy.webp",
+  },
+  {
+    name: "Block Travel",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-bt-7Ksr9J4vBhxxRI5kh3Wkd825rv0n0Y.webp",
+  },
+  {
+    name: "Nexton Dev",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proj-nexdev-0q3MzYniXcX9OVb7e2iUDxb1plCHhV.webp",
+  },
+]
+
+export function ProjectsCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true, 
+      align: "center",
+      skipSnaps: false,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  )
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
+    return () => {
+      emblaApi.off("select", onSelect)
+    }
+  }, [emblaApi, onSelect])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  return (
+    <section className="w-full bg-[#141414] py-16 md:py-24 overflow-hidden">
+      <div className="relative">
+        {/* Carousel */}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {projects.map((project, index) => {
+              const isSelected = index === selectedIndex
+              const isPrev = index === (selectedIndex - 1 + projects.length) % projects.length
+              const isNext = index === (selectedIndex + 1) % projects.length
+              const isVisible = isSelected || isPrev || isNext
+
+              return (
+                <div
+                  key={project.name}
+                  className="flex-[0_0_60%] min-w-0 px-2 md:px-4 transition-all duration-500"
+                  style={{
+                    transform: isSelected 
+                      ? "scale(1) perspective(1000px) rotateY(0deg)" 
+                      : isPrev 
+                        ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
+                        : isNext 
+                          ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
+                          : "scale(0.7)",
+                    opacity: isVisible ? 1 : 0.3,
+                    zIndex: isSelected ? 10 : 1,
+                  }}
+                >
+                  <div 
+                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${
+                      isSelected ? "shadow-2xl shadow-cyan-500/20" : "brightness-50"
+                    }`}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 80vw, 60vw"
+                    />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={scrollPrev}
+          className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
+          aria-label="Previous project"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          onClick={scrollNext}
+          className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
+          aria-label="Next project"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        {/* Gradient overlays for depth effect */}
+        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
+      </div>
+
+      {/* Dots indicator */}
+      <div className="flex justify-center gap-2 mt-8">
+        {projects.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === selectedIndex ? "bg-[#38bdf8] w-6" : "bg-white/30"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  )
+}
