@@ -33,7 +33,7 @@ export function StepsSection() {
   ]
 
   return (
-    <section className="w-full bg-[#141414] py-16 md:py-24 px-6 md:px-12 lg:px-20">
+    <section className="w-full bg-transparent py-16 md:py-24 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
