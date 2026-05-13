@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function Header() {
   return (
-    <header className="w-full bg-[#141414] py-5 px-6 md:px-12 lg:px-20">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#141414]/80 backdrop-blur-md py-5 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
