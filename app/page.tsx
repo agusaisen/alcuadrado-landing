@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { ProcessSection } from "@/components/process-section"
 import { StepsSection } from "@/components/steps-section"
 import { ProjectsCarousel } from "@/components/projects-carousel"
+import { PartnersSection } from "@/components/partners-section"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ProcessSection />
       <StepsSection />
       <ProjectsCarousel />
+      <PartnersSection />
     </main>
   )
 }
