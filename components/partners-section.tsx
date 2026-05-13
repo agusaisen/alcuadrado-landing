@@ -55,7 +55,7 @@ const partners = [
 export function PartnersSection() {
   return (
     <section className="w-full bg-[#141414] py-10 md:py-14 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
           {partners.map((partner) => (
             <div
