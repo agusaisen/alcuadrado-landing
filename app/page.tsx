@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { ProcessSection } from "@/components/process-section"
+import { StepsSection } from "@/components/steps-section"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ProcessSection />
+      <StepsSection />
     </main>
   )
 }

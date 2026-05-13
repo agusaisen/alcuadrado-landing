@@ -1,0 +1,119 @@
+export function StepsSection() {
+  const steps = [
+    {
+      number: "01",
+      title: "Entendemos\nel caos",
+      description: "Detectamos tareas manuales, procesos repetitivos, información dispersa y puntos donde la operación se vuelve cuello.",
+      highlight: true,
+    },
+    {
+      number: "02",
+      title: "Diseñamos una\nsolución simple",
+      description: "Definimos arquitectura, experiencia de usuario y flujos que hagan más simple lo complejo.",
+      highlight: false,
+    },
+    {
+      number: "03",
+      title: "Lo hacemos un\nproducto real",
+      description: "Desarrollamos soluciones sólidas, escalables y pensadas para usarse todos los días.",
+      highlight: false,
+    },
+    {
+      number: "04",
+      title: "Lo llevamos\na producción",
+      description: "Nos ocupamos del deploy, hosting, mantenimiento y estabilidad técnica para que el producto funcione de forma confiable.",
+      highlight: false,
+    },
+    {
+      number: "05",
+      title: "Optimizamos y\ndamos continuidad",
+      description: "Seguridad, escalabilidad y mantenimiento continuo del sistema, para acompañar el crecimiento del producto.",
+      highlight: false,
+    },
+  ]
+
+  return (
+    <section className="w-full bg-[#e8e8e8] py-16 md:py-24 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="mb-16 max-w-2xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#9ca3af] leading-tight mb-6">
+            Cada proyecto empieza{" "}
+            <br className="hidden md:block" />
+            entendiendo un problema real.
+          </h2>
+          <p className="text-[#71717a] text-base md:text-lg leading-relaxed">
+            No damos soluciones genéricas. Cada sistema, plataforma o experiencia 
+            nace de entender cómo funciona el negocio y qué necesita mejorar.
+          </p>
+        </div>
+
+        {/* Steps Grid - Staggered Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Left Column - Cards 01, 03, 05 */}
+          <div className="flex flex-col gap-6">
+            {[steps[0], steps[2], steps[4]].map((step) => (
+              <StepCard key={step.number} {...step} />
+            ))}
+          </div>
+
+          {/* Right Column - Cards 02, 04 (offset) */}
+          <div className="flex flex-col gap-6 lg:mt-24">
+            {[steps[1], steps[3]].map((step) => (
+              <StepCard key={step.number} {...step} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function StepCard({
+  number,
+  title,
+  description,
+  highlight,
+}: {
+  number: string
+  title: string
+  description: string
+  highlight: boolean
+}) {
+  return (
+    <div
+      className={`relative rounded-2xl p-8 md:p-10 min-h-[220px] ${
+        highlight
+          ? "bg-gradient-to-br from-[#38bdf8] to-[#7dd3fc]"
+          : "bg-[#a1a1aa]"
+      }`}
+    >
+      {/* Large Number */}
+      <span
+        className={`absolute top-6 right-8 text-6xl md:text-7xl lg:text-8xl font-light ${
+          highlight ? "text-white/30" : "text-white/20"
+        }`}
+      >
+        {number}
+      </span>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <h3
+          className={`text-2xl md:text-3xl font-semibold mb-4 whitespace-pre-line ${
+            highlight ? "text-white" : "text-white"
+          }`}
+        >
+          {title}
+        </h3>
+        <p
+          className={`text-sm md:text-base leading-relaxed max-w-sm ${
+            highlight ? "text-white/80" : "text-white/70"
+          }`}
+        >
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+}
