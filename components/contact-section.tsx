@@ -4,8 +4,8 @@ export function ContactSection() {
   return (
     <section className="relative w-full bg-gradient-to-b from-[#1a3a4a] to-[#0f2a38] py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background text HABLEMOS */}
-      <div className="absolute inset-0 flex items-end justify-center pointer-events-none overflow-hidden">
-        <span className="text-[12rem] md:text-[18rem] lg:text-[22rem] font-bold text-[#0a1f2a] leading-none tracking-tight select-none translate-y-12 md:translate-y-16">
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none overflow-hidden">
+        <span className="text-[12rem] md:text-[18rem] lg:text-[22rem] font-bold text-[#0a1f2a] leading-none tracking-tight select-none translate-y-1/3">
           HABLEMOS
         </span>
       </div>
