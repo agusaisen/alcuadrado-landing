@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main 
       className="min-h-screen bg-[#141414] bg-cover bg-top bg-no-repeat"
-      style={{ backgroundImage: "url('/Ambient Background.webp')" }}
+      style={{ backgroundImage: "url('/Ambient Background.svg')" }}
     >
       <Header />
       {/* Spacer for fixed header */}
