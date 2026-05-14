@@ -1,13 +1,19 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function ContactSection() {
   return (
     <section className="relative w-full bg-gradient-to-b from-[#1a3a4a] to-[#0f2a38] py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background text HABLEMOS */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none overflow-hidden">
-        <span className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-bold text-[#0a1f2a] leading-none tracking-tight select-none translate-y-1/4 whitespace-nowrap">
-          HABLEMOS
-        </span>
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none">
+        <Image
+          src="/hablemos.svg"
+          alt="HABLEMOS"
+          width={1335}
+          height={196}
+          className="w-full max-w-none translate-y-1/4 select-none"
+          priority={false}
+        />
       </div>
 
       {/* Content */}
