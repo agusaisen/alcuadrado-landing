@@ -57,14 +57,14 @@ export function Hero() {
 
           {/* CTA Button with glow effect */}
           <div className="flex flex-col items-center gap-6">
-            <button
-              className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-bold transition-all"
+            <a href="#proceso"
+              className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-bold transition-all cursor-pointer"
               style={{
                 boxShadow: "0 0 15px rgba(56, 189, 248, 0.3), 0 0 50px rgba(56, 189, 248, 0.1)"
               }}
             >
               Comencemos
-            </button>
+            </a>
 
             {/* Diamond icon + dot */}
             <div className="flex items-center gap-3 mt-4">
