@@ -3,6 +3,21 @@ import Image from "next/image"
 export function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
+      {/* Keyframes for diamond rotation animation */}
+      <style jsx>{`
+        @keyframes diamondRotate {
+          0%, 100% {
+            transform: rotate(-45deg);
+          }
+          50% {
+            transform: rotate(45deg);
+          }
+        }
+        .animate-diamond {
+          animation: diamondRotate 4s ease-in-out infinite;
+        }
+      `}</style>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col">
         {/* Background Image - Mobile: full width, right below header */}
@@ -41,7 +56,7 @@ export function Hero() {
           {/* CTA Button with glow effect */}
           <div className="flex flex-col items-center gap-6">
             <button
-              className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-medium transition-all"
+              className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-bold transition-all"
               style={{
                 boxShadow: "0 0 15px rgba(56, 189, 248, 0.3), 0 0 50px rgba(56, 189, 248, 0.1)"
               }}
@@ -58,6 +73,7 @@ export function Hero() {
                 fill="none"
                 stroke="white"
                 strokeWidth="2"
+                className="animate-diamond"
               >
                 <path d="M12 2L2 12l10 10 10-10L12 2z" />
               </svg>
@@ -103,24 +119,24 @@ export function Hero() {
 
             {/* CTA Section */}
             <div className="flex items-center gap-6">
-              <button className="bg-white text-[#141414] px-8 py-3 rounded-full font-medium hover:bg-[#d4d4d8] transition-colors">
+              <button className="bg-white text-[#141414] px-8 py-3 rounded-full font-bold hover:bg-[#d4d4d8] transition-colors">
                 Comencemos
               </button>
 
               {/* Diamond icon + dot */}
               <div className="flex items-center gap-2">
                 <svg
-                  width="20"
-                  height="20"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#d4d4d8"
-                  strokeWidth="1.5"
-                  className="opacity-60"
+                  stroke="white"
+                  strokeWidth="2"
+                  className="animate-diamond"
                 >
                   <path d="M12 2L2 12l10 10 10-10L12 2z" />
                 </svg>
-                <span className="w-2 h-2 rounded-full bg-[#ffffff] opacity-60" />
+                <span className="w-2.5 h-2.5 rounded-full bg-white" />
               </div>
             </div>
           </div>
