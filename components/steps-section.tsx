@@ -47,10 +47,11 @@ export function StepsSection() {
               src="/PROCESO-IMG.svg"
               alt="Decorative geometric illustration"
               fill
-              className="object-contain object-center scale-150"
+              className="object-contain object-center"
+              style={{ transform: "scale(2.5) translateX(-10%)" }}
             />
           </div>
-          
+
           {/* Text content */}
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#fafbfd] leading-tight mb-6">
@@ -59,18 +60,19 @@ export function StepsSection() {
               entendiendo un problema real.
             </h2>
             <p className="text-[#D4D4D8] text-base md:text-lg leading-relaxed">
-              No damos soluciones genéricas. Cada sistema, plataforma o experiencia 
+              No damos soluciones genéricas. Cada sistema, plataforma o experiencia
               nace de entender cómo funciona el negocio y qué necesita mejorar.
             </p>
           </div>
-          
+
           {/* Desktop: Image on the right */}
           <div className="hidden lg:block relative w-[400px] h-[300px] flex-shrink-0 overflow-hidden">
             <Image
               src="/PROCESO-IMG.svg"
               alt="Decorative geometric illustration"
               fill
-              className="object-contain object-center scale-150"
+              className="object-contain object-center"
+              style={{ transform: "scale(3.2) translateX(-10%)" }}
             />
           </div>
         </div>
