@@ -76,18 +76,18 @@ export function ProjectsCarousel() {
   return (
     <section className="w-full bg-transparent py-16 md:py-24 overflow-hidden" id="proyectos">
       <div className="relative">
-        {/* Top ellipse overlay for cylinder effect */}
+        {/* Top ellipse overlay for cylinder effect - Desktop only */}
         <div
-          className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
+          className="hidden lg:block absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
             background: "#050508",
             borderRadius: "0 0 50% 50%",
           }}
         />
 
-        {/* Bottom ellipse overlay for cylinder effect */}
+        {/* Bottom ellipse overlay for cylinder effect - Desktop only */}
         <div
-          className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
+          className="hidden lg:block absolute -bottom-16 left-1/2 -translate-x-1/2 w-[120%] h-32 z-20 pointer-events-none"
           style={{
             background: "#050508",
             borderRadius: "50% 50% 0 0",
