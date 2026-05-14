@@ -120,7 +120,7 @@ export function Hero() {
                 >
                   <path d="M12 2L2 12l10 10 10-10L12 2z" />
                 </svg>
-                <span className="w-2 h-2 rounded-full bg-[#d4d4d8] opacity-60" />
+                <span className="w-2 h-2 rounded-full bg-[#ffffff] opacity-60" />
               </div>
             </div>
           </div>
