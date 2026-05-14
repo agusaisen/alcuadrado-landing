@@ -74,7 +74,7 @@ export function ProjectsCarousel() {
   }, [emblaApi])
 
   return (
-    <section className="w-full bg-transparent py-16 md:py-24 overflow-hidden">
+    <section className="w-full bg-transparent py-16 md:py-24 overflow-hidden" id="proyectos">
       <div className="relative">
         {/* Top ellipse overlay for cylinder effect */}
         <div

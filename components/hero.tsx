@@ -2,59 +2,128 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="HERO-IMG.svg"
-          alt="Abstract blue sphere with orbital rings"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </div>
+    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden">
+      {/* Mobile Layout */}
+      <div className="lg:hidden flex flex-col">
+        {/* Background Image - Mobile: centered at top */}
+        <div className="relative w-full h-[50vh] flex items-center justify-center">
+          <div className="relative w-full h-full">
+            <Image
+              src="/HERO-IMG.svg"
+              alt="Abstract blue sphere with orbital rings"
+              fill
+              className="object-contain object-center"
+              priority
+            />
+          </div>
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="max-w-2xl">
+        {/* Content overlapping bottom half of image */}
+        <div className="relative z-10 -mt-24 px-6 pb-12">
           {/* Eyebrow */}
-          <p className="text-[#38bdf8] text-sm font-semibold tracking-wide uppercase mb-6">
+          <p className="text-[#38bdf8] text-xs font-semibold tracking-wide uppercase mb-4">
             Hacemos simples los procesos complejos
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white block">Creamos sistemas.</span>
-            <span className="text-[#38bdf8] block">Diseñamos claridad.</span>
+            <span className="bg-gradient-to-r from-[#38bdf8] to-[#d4d4d8] bg-clip-text text-transparent block">
+              Diseñamos claridad.
+            </span>
           </h1>
 
           {/* Description */}
-          <p className="text-[#d4d4d8] text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+          <p className="text-[#a1a1aa] text-sm leading-relaxed mb-8">
             Transformamos operaciones, flujos y tareas que todavía viven en
             planillas, mails o WhatsApp en productos digitales claros, escalables
             y fáciles de usar.
           </p>
 
-          {/* CTA Section */}
-          <div className="flex items-center gap-6">
-            <button className="bg-white text-[#141414] px-8 py-3 rounded-full font-medium hover:bg-[#d4d4d8] transition-colors">
+          {/* CTA Button with glow effect */}
+          <div className="flex flex-col items-center gap-6">
+            <button 
+              className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-medium transition-all"
+              style={{
+                boxShadow: "0 0 15px rgba(56, 189, 248, 0.3), 0 0 50px rgba(56, 189, 248, 0.1)"
+              }}
+            >
               Comencemos
             </button>
 
             {/* Diamond icon + dot */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3 mt-4">
               <svg
-                width="20"
-                height="20"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#d4d4d8"
-                strokeWidth="1.5"
-                className="opacity-60"
+                stroke="white"
+                strokeWidth="2"
               >
                 <path d="M12 2L2 12l10 10 10-10L12 2z" />
               </svg>
-              <span className="w-2 h-2 rounded-full bg-[#d4d4d8] opacity-60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex items-center min-h-[calc(100vh-80px)]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/HERO-IMG.svg"
+            alt="Abstract blue sphere with orbital rings"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+          <div className="max-w-2xl">
+            {/* Eyebrow */}
+            <p className="text-[#38bdf8] text-sm font-semibold tracking-wide uppercase mb-6">
+              Hacemos simples los procesos complejos
+            </p>
+
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <span className="text-white block">Creamos sistemas.</span>
+              <span className="text-[#38bdf8] block">Diseñamos claridad.</span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-[#d4d4d8] text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+              Transformamos operaciones, flujos y tareas que todavía viven en
+              planillas, mails o WhatsApp en productos digitales claros, escalables
+              y fáciles de usar.
+            </p>
+
+            {/* CTA Section */}
+            <div className="flex items-center gap-6">
+              <button className="bg-white text-[#141414] px-8 py-3 rounded-full font-medium hover:bg-[#d4d4d8] transition-colors">
+                Comencemos
+              </button>
+
+              {/* Diamond icon + dot */}
+              <div className="flex items-center gap-2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#d4d4d8"
+                  strokeWidth="1.5"
+                  className="opacity-60"
+                >
+                  <path d="M12 2L2 12l10 10 10-10L12 2z" />
+                </svg>
+                <span className="w-2 h-2 rounded-full bg-[#d4d4d8] opacity-60" />
+              </div>
             </div>
           </div>
         </div>

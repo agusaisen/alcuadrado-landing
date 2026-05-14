@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function ProcessSection() {
   return (
-    <section className="w-full bg-transparent px-6 md:px-12 lg:px-20 py-8">
+    <section className="w-full bg-transparent px-6 md:px-12 lg:px-20 py-8" id="proceso">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden">
           {/* Left side - Image */}
