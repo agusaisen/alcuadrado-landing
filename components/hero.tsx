@@ -5,11 +5,11 @@ export function Hero() {
     <section className="relative min-h-[calc(100vh-80px)] overflow-hidden">
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col">
-        {/* Background Image - Mobile: centered at top */}
+        {/* Background Image - Mobile: specific mobile image centered at top */}
         <div className="relative w-full h-[50vh] flex items-center justify-center">
           <div className="relative w-full h-full">
             <Image
-              src="/HERO-IMG.svg"
+              src="/HERO-IMG-MBL.svg"
               alt="Abstract blue sphere with orbital rings"
               fill
               className="object-contain object-center"
