@@ -17,7 +17,7 @@ export function Hero() {
         </div>
 
         {/* Content overlapping bottom half of image */}
-        <div className="relative z-10 -mt-35 px-6 pb-12">
+        <div className="relative z-10 -mt-20 px-6 pb-12">
           {/* Eyebrow */}
           <p className="text-[#38bdf8] text-xs font-semibold tracking-wide uppercase mb-4">
             Hacemos simples los procesos complejos
