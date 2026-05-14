@@ -77,8 +77,17 @@ export function StepsSection() {
           </div>
         </div>
 
-        {/* Steps Grid - Staggered Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Steps Grid - Mobile: sequential, Desktop: staggered two-column */}
+        
+        {/* Mobile Layout - Sequential order */}
+        <div className="flex flex-col gap-6 lg:hidden">
+          {steps.map((step) => (
+            <StepCard key={step.number} {...step} />
+          ))}
+        </div>
+
+        {/* Desktop Layout - Staggered two-column */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-6">
           {/* Left Column - Cards 01, 03, 05 */}
           <div className="flex flex-col gap-6">
             {[steps[0], steps[2], steps[4]].map((step) => (

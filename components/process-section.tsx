@@ -19,7 +19,7 @@ export function ProcessSection() {
           <div className="w-full lg:w-1/2 bg-transparent px-6 py-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
               <span className="text-[#fefefe] font-light">Muchas empresas crecieron,</span>
-              <span className="text-[#ffffff] font-light">pero </span>
+              <span className="text-[#ffffff] font-light"> pero </span>
               <span className="bg-linear-to-r from-[#141414]  via-[#38BDF8] to-[#141414] bg-clip-text text-transparent block">sus procesos no.</span>
             </h2>
 
