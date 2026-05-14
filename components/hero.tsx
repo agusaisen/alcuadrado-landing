@@ -26,7 +26,7 @@ export function Hero() {
           {/* Main Heading */}
           <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white block">Creamos sistemas.</span>
-            <span className="bg-gradient-to-r from-[#38bdf8] to-[#d4d4d8] bg-clip-text text-transparent block">
+            <span className="bg-linear-to-r from-[#38BDF8] to-[#d4d4d8] bg-clip-text text-transparent block">
               Diseñamos claridad.
             </span>
           </h1>
