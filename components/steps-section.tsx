@@ -72,7 +72,7 @@ export function StepsSection() {
               alt="Decorative geometric illustration"
               fill
               className="object-contain object-center"
-              style={{ transform: "scale(3.2) translateX(-10%)" }}
+              style={{ transform: "scale(2.5) translateX(-2%)" }}
             />
           </div>
         </div>
