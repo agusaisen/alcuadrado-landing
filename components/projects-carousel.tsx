@@ -1,9 +1,22 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useState, useMemo } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false)
+  
+  useEffect(() => {
+    const checkIsDesktop = () => setIsDesktop(window.innerWidth >= 1024)
+    checkIsDesktop()
+    window.addEventListener("resize", checkIsDesktop)
+    return () => window.removeEventListener("resize", checkIsDesktop)
+  }, [])
+  
+  return isDesktop
+}
 
 const projects = [
   {
@@ -41,6 +54,7 @@ const projects = [
 ]
 
 export function ProjectsCarousel() {
+  const isDesktop = useIsDesktop()
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -111,15 +125,15 @@ export function ProjectsCarousel() {
                     transform: isSelected
                       ? "scale(1) perspective(1000px) rotateY(0deg)"
                       : isPrev
-                        ? window.innerWidth >= 1024 
+                        ? isDesktop 
                           ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
                           : "scale(1)"
                         : isNext
-                          ? window.innerWidth >= 1024
+                          ? isDesktop
                             ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
                             : "scale(1)"
-                          : window.innerWidth >= 1024 ? "scale(0.7)" : "scale(1)",
-                    opacity: isVisible ? 1 : (window.innerWidth >= 1024 ? 0.3 : 1),
+                          : isDesktop ? "scale(0.7)" : "scale(1)",
+                    opacity: isVisible ? 1 : (isDesktop ? 0.3 : 1),
                     zIndex: isSelected ? 10 : 1,
                   }}
                 >
