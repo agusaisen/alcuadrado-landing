@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="relative w-full bg-[#000000] overflow-hidden">
       {/* Background image */}
-      <div className="relative w-full h-full md:h-[500px] lg:h-[600px]">
+      <div className="relative w-full h-[350px] md:h-[500px] lg:h-[600px]">
         <Image
           src="FOOTER-IMG.svg"
           alt="Decorative compass illustration"
@@ -29,7 +29,7 @@ export function Footer() {
           />
 
           {/* Copyright */}
-          <p className="text-white/60 text-sm">
+          <p className="text-white/60 text-sm text-center md:text-left">
             © {new Date().getFullYear()} alcuadrado.it — Creado con precisión.
           </p>
         </div>

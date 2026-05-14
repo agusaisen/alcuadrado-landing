@@ -2,20 +2,18 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden">
+    <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col">
-        {/* Background Image - Mobile: specific mobile image centered at top */}
-        <div className="relative w-full h-[65vh] flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/HERO-IMG-MBL.svg"
-              alt="Abstract blue sphere with orbital rings"
-              fill
-              className="object-contain object-center"
-              priority
-            />
-          </div>
+        {/* Background Image - Mobile: full width, right below header */}
+        <div className="relative w-full aspect-square">
+          <Image
+            src="/HERO-IMG-MBL.svg"
+            alt="Abstract blue sphere with orbital rings"
+            fill
+            className="object-cover object-center"
+            priority
+          />
         </div>
 
         {/* Content overlapping bottom half of image */}
