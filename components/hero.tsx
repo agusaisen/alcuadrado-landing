@@ -95,7 +95,7 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-[#d4d4d8] text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-[#D4D4D8] text-base md:text-lg leading-relaxed mb-10 max-w-xl">
               Transformamos operaciones, flujos y tareas que todavía viven en
               planillas, mails o WhatsApp en productos digitales claros, escalables
               y fáciles de usar.

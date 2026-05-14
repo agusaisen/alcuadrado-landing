@@ -44,7 +44,7 @@ export function StepsSection() {
             <br className="hidden md:block" />
             entendiendo un problema real.
           </h2>
-          <p className="text-[#71717a] text-base md:text-lg leading-relaxed">
+          <p className="text-[#D4D4D8] text-base md:text-lg leading-relaxed">
             No damos soluciones genéricas. Cada sistema, plataforma o experiencia 
             nace de entender cómo funciona el negocio y qué necesita mejorar.
           </p>
@@ -104,7 +104,7 @@ function StepCard({
         <h3 className="text-2xl md:text-3xl font-semibold mb-4 whitespace-pre-line text-white">
           {title}
         </h3>
-        <p className="text-sm md:text-base leading-relaxed max-w-sm text-white/70 transition-all duration-500 group-hover:text-white/80">
+        <p className="text-sm md:text-base leading-relaxed max-w-sm text-[#D4D4D8] transition-all duration-500 group-hover:text-white">
           {description}
         </p>
       </div>
