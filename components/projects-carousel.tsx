@@ -106,21 +106,25 @@ export function ProjectsCarousel() {
               return (
                 <div
                   key={project.name}
-                  className="flex-[0_0_60%] min-w-0 px-2 md:px-4 transition-all duration-500"
+                  className="flex-[0_0_90%] lg:flex-[0_0_60%] min-w-0 px-3 lg:px-4 transition-all duration-500"
                   style={{
                     transform: isSelected
                       ? "scale(1) perspective(1000px) rotateY(0deg)"
                       : isPrev
-                        ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
+                        ? window.innerWidth >= 1024 
+                          ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
+                          : "scale(1)"
                         : isNext
-                          ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
-                          : "scale(0.7)",
-                    opacity: isVisible ? 1 : 0.3,
+                          ? window.innerWidth >= 1024
+                            ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
+                            : "scale(1)"
+                          : window.innerWidth >= 1024 ? "scale(0.7)" : "scale(1)",
+                    opacity: isVisible ? 1 : (window.innerWidth >= 1024 ? 0.3 : 1),
                     zIndex: isSelected ? 10 : 1,
                   }}
                 >
                   <div
-                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${isSelected ? "shadow-2xl shadow-cyan-500/20" : "brightness-50"
+                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${isSelected ? "shadow-2xl shadow-cyan-500/20" : "lg:brightness-50"
                       }`}
                   >
                     <Image
@@ -128,7 +132,7 @@ export function ProjectsCarousel() {
                       alt={project.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 80vw, 60vw"
+                      sizes="(max-width: 1024px) 90vw, 60vw"
                     />
                   </div>
                 </div>
@@ -157,9 +161,9 @@ export function ProjectsCarousel() {
           </svg>
         </button>
 
-        {/* Gradient overlays for depth effect */}
-        <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
-        <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
+        {/* Gradient overlays for depth effect - Desktop only */}
+        <div className="hidden lg:block absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
       </div>
 
       {/* Dots indicator */}
