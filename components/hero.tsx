@@ -26,7 +26,7 @@ export function Hero() {
           {/* Main Heading */}
           <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white block">Creamos sistemas.</span>
-            <span className="bg-linear-to-r from-[#38BDF8] to-[#d4d4d8]  ">
+            <span className="bg-linear-to-r from-[#38BDF8] to-[#d4d4d8] bg-clip-text text-transparent block">
               Diseñamos claridad.
             </span>
           </h1>
@@ -91,7 +91,7 @@ export function Hero() {
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="text-white block">Creamos sistemas.</span>
-              <span className="text-[#38bdf8] block">Diseñamos claridad.</span>
+              <span className="bg-linear-to-r from-[#38BDF8] to-[#d4d4d8] bg-clip-text text-transparent block">Diseñamos claridad.</span>
             </h1>
 
             {/* Description */}

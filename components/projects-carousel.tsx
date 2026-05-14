@@ -7,14 +7,14 @@ import Image from "next/image"
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(false)
-  
+
   useEffect(() => {
     const checkIsDesktop = () => setIsDesktop(window.innerWidth >= 1024)
     checkIsDesktop()
     window.addEventListener("resize", checkIsDesktop)
     return () => window.removeEventListener("resize", checkIsDesktop)
   }, [])
-  
+
   return isDesktop
 }
 
@@ -120,17 +120,17 @@ export function ProjectsCarousel() {
               return (
                 <div
                   key={project.name}
-                  className="flex-[0_0_90%] lg:flex-[0_0_60%] min-w-0 px-3 lg:px-4 transition-all duration-500"
+                  className="flex-[0_0_90%] lg:flex-[0_0_60%] min-w-0 px-3 lg:px-4 transition-all "
                   style={{
                     transform: isSelected
                       ? "scale(1) perspective(1000px) rotateY(0deg)"
                       : isPrev
-                        ? isDesktop 
-                          ? "scale(0.85) perspective(1000px) rotateY(15deg) translateX(10%)"
+                        ? isDesktop
+                          ? "scale(0.95) perspective(1000px) rotateY(15deg) translateX(10%)"
                           : "scale(1)"
                         : isNext
                           ? isDesktop
-                            ? "scale(0.85) perspective(1000px) rotateY(-15deg) translateX(-10%)"
+                            ? "scale(0.95) perspective(1000px) rotateY(-15deg) translateX(-10%)"
                             : "scale(1)"
                           : isDesktop ? "scale(0.7)" : "scale(1)",
                     opacity: isVisible ? 1 : (isDesktop ? 0.3 : 1),
@@ -138,7 +138,7 @@ export function ProjectsCarousel() {
                   }}
                 >
                   <div
-                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-500 ${isSelected ? "shadow-2xl shadow-cyan-500/20" : "lg:brightness-50"
+                    className={`relative aspect-video rounded-2xl overflow-hidden transition-all ${isSelected ? "shadow-2xl shadow-cyan-500/20" : "lg:brightness-50"
                       }`}
                   >
                     <Image
@@ -155,43 +155,14 @@ export function ProjectsCarousel() {
           </div>
         </div>
 
-        {/* Navigation buttons */}
-        <button
-          onClick={scrollPrev}
-          className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
-          aria-label="Previous project"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-        <button
-          onClick={scrollNext}
-          className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors"
-          aria-label="Next project"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </button>
+        
 
         {/* Gradient overlays for depth effect - Desktop only */}
         <div className="hidden lg:block absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />
         <div className="hidden lg:block absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#141414] to-transparent pointer-events-none z-10" />
       </div>
 
-      {/* Dots indicator */}
-      <div className="flex justify-center gap-2 mt-8">
-        {projects.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={`w-2 h-2 rounded-full transition-all ${index === selectedIndex ? "bg-[#38bdf8] w-6" : "bg-white/30"
-              }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+
     </section>
   )
 }

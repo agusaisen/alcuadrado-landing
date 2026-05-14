@@ -20,7 +20,7 @@ export function ProcessSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
               <span className="text-[#fefefe] font-light">Muchas empresas crecieron,</span>
               <span className="text-[#ffffff] font-light">pero </span>
-              <span className="text-[#38bdf8] font-semibold">sus procesos no.</span>
+              <span className="bg-linear-to-r from-[#141414]  via-[#38BDF8] to-[#141414] bg-clip-text text-transparent block">sus procesos no.</span>
             </h2>
 
             <p className="text-[#D4D4D8] text-base md:text-lg leading-relaxed">
