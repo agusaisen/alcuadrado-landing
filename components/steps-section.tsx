@@ -42,12 +42,12 @@ export function StepsSection() {
         {/* Header with Image */}
         <div className="mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           {/* Mobile: Image first */}
-          <div className="lg:hidden relative w-full h-[250px]">
+          <div className="lg:hidden relative w-full h-[250px] overflow-hidden">
             <Image
               src="/PROCESO-IMG.svg"
               alt="Decorative geometric illustration"
               fill
-              className="object-contain object-center"
+              className="object-contain object-center scale-150"
             />
           </div>
           
@@ -65,12 +65,12 @@ export function StepsSection() {
           </div>
           
           {/* Desktop: Image on the right */}
-          <div className="hidden lg:block relative w-[400px] h-[300px] flex-shrink-0">
+          <div className="hidden lg:block relative w-[400px] h-[300px] flex-shrink-0 overflow-hidden">
             <Image
               src="/PROCESO-IMG.svg"
               alt="Decorative geometric illustration"
               fill
-              className="object-contain object-center"
+              className="object-contain object-center scale-150"
             />
           </div>
         </div>
