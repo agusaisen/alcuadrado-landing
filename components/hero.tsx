@@ -6,7 +6,7 @@ export function Hero() {
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col">
         {/* Background Image - Mobile: specific mobile image centered at top */}
-        <div className="relative w-full h-[50vh] flex items-center justify-center">
+        <div className="relative w-full h-[65vh] flex items-center justify-center">
           <div className="relative w-full h-full">
             <Image
               src="/HERO-IMG-MBL.svg"
@@ -19,7 +19,7 @@ export function Hero() {
         </div>
 
         {/* Content overlapping bottom half of image */}
-        <div className="relative z-10 -mt-24 px-6 pb-12">
+        <div className="relative z-10 -mt-35 px-6 pb-12">
           {/* Eyebrow */}
           <p className="text-[#38bdf8] text-xs font-semibold tracking-wide uppercase mb-4">
             Hacemos simples los procesos complejos
@@ -42,7 +42,7 @@ export function Hero() {
 
           {/* CTA Button with glow effect */}
           <div className="flex flex-col items-center gap-6">
-            <button 
+            <button
               className="bg-[#d4d4d8] text-[#141414] px-10 py-3.5 rounded-full font-medium transition-all"
               style={{
                 boxShadow: "0 0 15px rgba(56, 189, 248, 0.3), 0 0 50px rgba(56, 189, 248, 0.1)"
