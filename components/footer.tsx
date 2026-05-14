@@ -19,7 +19,7 @@ export function Footer() {
 
       {/* Footer content: logo left, copyright right */}
       <div className="absolute bottom-0 left-0 right-0 py-6 px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
           {/* Logo */}
           <Image
             src="/logotipoA2.svg"
@@ -29,8 +29,10 @@ export function Footer() {
           />
 
           {/* Copyright */}
-          <p className="text-white/60 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} alcuadrado.it — Creado con precisión.
+          <p className="text-white/60 text-sm text-right">
+            <span className="block md:inline">© {new Date().getFullYear()} alcuadrado.it</span>
+            <span className="hidden md:inline"> — </span>
+            <span className="block md:inline">Creado con precisión.</span>
           </p>
         </div>
       </div>
