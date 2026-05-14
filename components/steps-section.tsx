@@ -40,7 +40,7 @@ export function StepsSection() {
     <section className="w-full bg-transparent py-16 md:py-24 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header with Image */}
-        <div className="mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div className="mb-16 flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-4">
           {/* Mobile: Image first */}
           <div className="lg:hidden relative w-full h-[250px] overflow-hidden">
             <Image
@@ -48,7 +48,7 @@ export function StepsSection() {
               alt="Decorative geometric illustration"
               fill
               className="object-contain object-center"
-              style={{ transform: "scale(2.5) translateX(-10%)" }}
+              style={{ transform: "scale(2.5) translateX(-2%)" }}
             />
           </div>
 
