@@ -53,7 +53,7 @@ export function StepsSection() {
           
           {/* Text content */}
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#9ca3af] leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#fafbfd] leading-tight mb-6">
               Cada proyecto empieza{" "}
               <br className="hidden md:block" />
               entendiendo un problema real.
@@ -70,7 +70,7 @@ export function StepsSection() {
               src="/PROCESO-IMG.svg"
               alt="Decorative geometric illustration"
               fill
-              className="object-contain object-right"
+              className="object-contain object-center"
             />
           </div>
         </div>
