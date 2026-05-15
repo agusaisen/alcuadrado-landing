@@ -7,7 +7,7 @@ export function StepsSection() {
     {
       number: "01",
       title: "Entendemos\nel caos",
-      description: "Detectamos tareas manuales, procesos repetitivos, información dispersa y puntos donde la operación se vuelve cuello.",
+      description: "Detectamos tareas manuales, procesos repetitivos, información dispersa y puntos donde la operación se vuelve cuello de botella.",
       highlight: true,
     },
     {
@@ -78,7 +78,7 @@ export function StepsSection() {
         </div>
 
         {/* Steps Grid - Mobile: sequential, Desktop: staggered two-column */}
-        
+
         {/* Mobile Layout - Sequential order */}
         <div className="flex flex-col gap-6 lg:hidden">
           {steps.map((step) => (
