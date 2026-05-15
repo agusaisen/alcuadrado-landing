@@ -123,7 +123,7 @@ export function Hero() {
             <div className="flex items-center gap-6">
               <button className="bg-white text-[#141414] px-8 py-3 rounded-full font-bold hover:bg-[#d4d4d8] transition-colors">
                 Comencemos
-              </button>
+              </a>
 
               {/* Diamond icon + dot */}
               <div className="flex items-center gap-2">
