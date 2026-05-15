@@ -131,7 +131,7 @@ function StepCard({
       }}
     >
       {/* Large Number */}
-      <span className="absolute top-6 right-8 text-6xl md:text-7xl lg:text-8xl font-light text-white/20 transition-all duration-500 group-hover:text-white/30">
+      <span className="absolute top-6 right-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white/20 transition-all duration-500 group-hover:text-white/30">
         {number}
       </span>
 
