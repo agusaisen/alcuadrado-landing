@@ -32,7 +32,7 @@ export function Header() {
           </Link>
           <Link
             href="http://wa.me/+542994768136" target="blank"
-            className="bg-[#f1f1f4] text-[#141414] px-6 py-2.5 rounded-full text-sm font-medium hover:bg-white transition-colors"
+            className="bg-[#f1f1f4] text-[#141414] px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-white transition-colors whitespace-nowrap"
           >
             Coordinar llamada
           </Link>
