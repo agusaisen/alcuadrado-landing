@@ -22,7 +22,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
           {/* Logo */}
           <Image
-            src="/logotipoA2.svg"
+            src="/logotipo.svg"
             alt="alcuadrado.it"
             width={120}
             height={38}
