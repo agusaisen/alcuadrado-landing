@@ -8,7 +8,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/logotipo.webp"
+            src="/logotipo.svg"
             alt="alcuadrado.it"
             width={150}
             height={48}
