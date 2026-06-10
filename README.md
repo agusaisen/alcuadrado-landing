@@ -1,33 +1,56 @@
-# alcuadrado-landing
+# AlCuadrado.it
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Sitio web institucional desarrollado para presentar los servicios de AlCuadrado, enfocado en soluciones digitales, desarrollo web y presencia online profesional.
 
-## Built with v0
+## 🚀 Tecnologías utilizadas
+- NEXT.js
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Design
+- Animaciones y transiciones modernas
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## 📂 Estructura del proyecto
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_wdahUHLENVFWkJYvDruqT95Gdf2v)
 
-## Getting Started
+/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── videos/
+└── README.md
+✨ Características
+Diseño moderno y responsive
+Optimización para dispositivos móviles
+Navegación fluida
+Animaciones suaves
+Secciones institucionales
+Integración con redes y contacto
+Optimización visual y de rendimiento
+📱 Responsive
 
-First, run the development server:
+El sitio está adaptado para:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Desktop
+Tablets
+Smartphones
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠️ Futuras mejoras
+Panel de administración
+Blog integrado
+Multi idioma
+Formularios conectados a backend
+Optimización SEO avanzada
+👨‍💻 Desarrollo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Desarrollado por AlCuadrado.
 
-## Learn More
+📄 Licencia
 
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+Este proyecto es de uso privado y comercial.
+Todos los derechos reservados.
