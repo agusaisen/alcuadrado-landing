@@ -60,14 +60,14 @@ const partners = [
   {
     name: "Kaatech",
     logo: "kaatech.webp",
-    width: 104,
+    width: 120,
     height: 49,
     url: "https://kaa-tech.com/",
   },
   {
     name: "Mr. Fill",
     logo: "logo-fill.webp",
-    width: 100,
+    width: 150,
     height: 49,
     url: "https://mrfill.com.ar",
   },
