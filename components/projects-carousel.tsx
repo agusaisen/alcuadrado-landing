@@ -51,6 +51,10 @@ const projects = [
     name: "Nexton Dev",
     image: "proj-nexdev.webp",
   },
+  {
+    name: "KaaTech",
+    image: "kaatech.webp",
+  },
 ]
 
 export function ProjectsCarousel() {
