@@ -51,6 +51,10 @@ const projects = [
     name: "Nexton Dev",
     image: "proj-nexdev.webp",
   },
+  {
+    name: "KaaTech",
+    image: "kaa-tech-web.webp",
+  },
 ]
 
 export function ProjectsCarousel() {
@@ -155,7 +159,7 @@ export function ProjectsCarousel() {
           </div>
         </div>
 
-        
+
 
         {/* Gradient overlays for depth effect - Desktop only */}
         <div className="hidden lg:block absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none z-10" />

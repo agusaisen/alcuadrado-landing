@@ -77,12 +77,12 @@ const partners = [
 export function PartnersSection() {
   return (
     <section className="w-full bg-transparent py-10 md:py-14 px-6 md:px-12 lg:px-20">
-      <div className="">
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-8">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex items-center justify-center grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="flex items-center justify-center grayscale opacity-70 hover:opacity-100 transition-opacity basis-[calc(50%-1rem)] sm:basis-[calc(33.333%-1.334rem)] md:basis-[calc(25%-1.5rem)] lg:basis-[calc(12.5%-1.75rem)]"
             >
               <Image
                 src={partner.logo}
