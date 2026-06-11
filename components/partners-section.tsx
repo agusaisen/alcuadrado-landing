@@ -70,7 +70,7 @@ const partners = [
     width: 90,
     height: 45,
     url:"https://mrfill.com.ar",
-  }
+  },
 
 ]
 
