@@ -57,6 +57,20 @@ const partners = [
     height: 45,
     url:"https://patagonicodh.com.ar/",
   },
+  {
+    name: "Kaatech",
+    logo: "kaatech.webp",
+    width: 90,
+    height: 45,
+    url:"https://kaa-tech.com/",
+  },
+  {
+    name: "Mr. Fill",
+    logo: "logo-fill.webp",
+    width: 90,
+    height: 45,
+    url:"https://mrfill.com.ar",
+  }
 
 ]
 
