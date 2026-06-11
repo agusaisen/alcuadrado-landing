@@ -77,8 +77,8 @@ const partners = [
 export function PartnersSection() {
   return (
     <section className="w-full bg-transparent py-10 md:py-14 px-6 md:px-12 lg:px-20">
-      <div className="">
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 items-center justify-items-center gap-8 md:gap-10 lg:gap-12">
           {partners.map((partner) => (
             <div
               key={partner.name}
