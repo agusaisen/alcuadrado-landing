@@ -71,6 +71,13 @@ const partners = [
     height: 49,
     url: "https://mrfill.com.ar",
   },
+  {
+    name: "LA 3D",
+    logo: "logo-la3d.webp",
+    width: 150,
+    height: 49,
+    url: "https://la3d.com.ar",
+  },
 
 ]
 
